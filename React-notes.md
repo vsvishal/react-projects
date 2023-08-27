@@ -6,7 +6,7 @@
 
 ### Tilde (~) notation: It is used to match the most recent patch version. Tilde ~ notation freezes the major version and minor version. As we know patch updates are bug fixes that’s why we can say ~ notation allows us to automatically accept bug fixes.
 
-## Caret (^) notation: It is used for automatically updating the minor updates along with patch updates.
+### Caret (^) notation: It is used for automatically updating the minor updates along with patch updates.
 
 #
 
