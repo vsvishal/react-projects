@@ -8,6 +8,10 @@
 
 ### Caret (^) notation: It is used for automatically updating the minor updates along with patch updates.
 
+### Syntax: The syntax of the npm version looks like the following.
+
+### Major.Minor.Patch
+
 #
 
 ## 🤓 Package.json vs Package-lock.json
