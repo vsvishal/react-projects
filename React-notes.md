@@ -36,3 +36,7 @@
 ```
 
 ## 👨‍🚀 NPX is a package executer, and it is used to execute javascript packages directly, without installing them
+
+## browserslist package - The browsers to which you want your web to support
+
+[👆 website: browserslist](https://browserslist.dev/?q=bGFzdCAyIHZlcnNpb25z)
