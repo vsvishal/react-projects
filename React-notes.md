@@ -25,3 +25,14 @@
 ### This is when they released package-lock.json. Now, this file will lock npm dependencies the way they were at the time of making the program. So, even if someone clones your repo and installs this package later, he will get hands on the version that the program was scripted in. Basically, it just ignores tilde and carat functions.
 
 #
+
+## 👨‍🚀 Transitive Dependency - Package installed has other package dependency, same way dependent package has other package dependency and its continue .....
+
+## 👨‍🚀 To ingnite app using parcel package use below cmd
+
+```sh
+    npx parcel index.html - for dev build
+    npx parcel build index.html - for prod build
+```
+
+## 👨‍🚀 NPX is a package executer, and it is used to execute javascript packages directly, without installing them
