@@ -40,3 +40,27 @@
 ## browserslist package - The browsers to which you want your web to support
 
 [👆 website: browserslist](https://browserslist.dev/?q=bGFzdCAyIHZlcnNpb25z)
+
+#
+
+## Update "scripts" in package.json for making command short to start application
+
+### So next time instead of running full cmd, just use "npm run start / npm start" (only for dev) but for prod full cmd is required "npm run build"
+
+```json
+"scripts": {
+    "test": "jest",
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+```
+
+#
+
+## 👨‍🚀 JSX is not HTML is JS, it is HTML/XML like syntax
+
+## 👨‍🚀 Babel converts (transcompile) the JSX code to JS code which browser understands
+
+## 👨‍🚀 JSX => React.createElement => ReactElement - JS object => HTMLElement (render) [This all things are done by Babel]
+
+## 👨‍🚀 Babel is Javascript compiler
