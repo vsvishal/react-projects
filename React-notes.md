@@ -64,3 +64,7 @@
 ## 👨‍🚀 JSX => React.createElement => ReactElement - JS object => HTMLElement (render) [This all things are done by Babel]
 
 ## 👨‍🚀 Babel is Javascript compiler
+
+## 👨‍🚀 Always start React Component name with capital letter
+
+## 👨‍🚀 React Functional component is normal JS function which return some JSX (React element)
