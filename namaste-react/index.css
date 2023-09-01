@@ -1,7 +1,5 @@
-h1 {
-    background-color: red;
-}
-
-#heading {
-    background-color: brown;
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
 }
