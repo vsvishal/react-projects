@@ -107,3 +107,13 @@ const HeadingComponent = () => {
   );
 };
 ```
+
+## 👨‍🚀 First thing before starting developing react app is to create visualization (plan)
+
+## 👨‍🚀 Add extension Json viewer in chrome
+
+## 👨‍🚀 useCallback(fn, [dependencies]) - This hook is used to optimize the running of Function if something is done on its dependencies, basically it cache to optimize the running of Function again. It memorize the function
+
+## 👨‍🚀 useEffect(fn, [dependencies]) - If anyting is changes in dependencies then run the Function.
+
+## 👨‍🚀 - If I need reference of anything then use the userRef() hook
