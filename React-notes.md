@@ -116,4 +116,10 @@ const HeadingComponent = () => {
 
 ## 👨‍🚀 useEffect(fn, [dependencies]) - If anyting is changes in dependencies then run the Function.
 
-## 👨‍🚀 - If I need reference of anything then use the userRef() hook
+## 👨‍🚀 If I need reference of anything then use the userRef() hook
+
+## 👨‍🚀 Config driven UI - It means controlling your UI through data
+
+## 👨‍🚀 Whenever you loop the list alway add unique key={uniqui_id} to it, if you don't provide key e.g while looping array through map() then React will re-render all the components which is not good for optimization. So, adding key, React will re-render only changed thing. To allow React to uniquely identify the element always use key, so performance will be good.
+
+## 👨‍🚀 React doesn't recomment to use index as key, if you don't have any unique index then use index as key.
