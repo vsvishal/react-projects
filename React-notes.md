@@ -68,3 +68,28 @@
 ## 👨‍🚀 Always start React Component name with capital letter
 
 ## 👨‍🚀 React Functional component is normal JS function which return some JSX (React element)
+
+## 👨‍🚀 Component Composition is composing one component into one another
+
+## 👨‍🚀JSX don't directly execute/replace {variable}, its do some sanitization before it do, so it avoid any kind of attack./.,m
+
+```javascript
+// React Element
+const title = <h2>I am title React element</h2>;
+
+// React Component
+const TitleComponent = () => {
+  return <h3>I am Titile Component</h3>;
+};
+
+const HeadingComponent = () => {
+  return (
+    <>
+      <h1 className="head">This is Heading Component</h1>
+      {title}
+      <TitleComponent />
+      <p>Lorem ipsum dolor sit amet.</p>
+    </>
+  );
+};
+```
