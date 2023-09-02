@@ -1,5 +1,19 @@
 # 🤠 React Notes 🤠
 
+## 🤓 React Fiber Architecture
+
+[👆 website: github](https://github.com/acdlite/react-fiber-architecture)
+
+### What is reconciliation?
+
+### The algorithm React uses to diff one tree with another to determine which parts need to be changed.
+
+### update - A change in the data used to render a React app. Usually the result of `setState`. Eventually results in a re-render.
+
+### Reconciliation is the algorithm behind what is popularly understood as the "virtual DOM." A high-level description goes something like this: when you render a React application, a tree of nodes that describes the app is generated and saved in memory. This tree is then flushed to the rendering environment — for example, in the case of a browser application, it's translated to a set of DOM operations. When the app is updated (usually via setState), a new tree is generated. The new tree is diffed with the previous tree to compute which operations are needed to update the rendered app.
+
+#
+
 ## Difference between tilde ( ~ ) and caret ( ^ ) in package.json
 
 [👆 website: geeksforgeeks](https://www.geeksforgeeks.org/difference-between-tilde-and-caret-in-package-json/)
@@ -26,24 +40,24 @@
 
 #
 
-## 👨‍🚀 Transitive Dependency - Package installed has other package dependency, same way dependent package has other package dependency and its continue .....
+### 👨‍🚀 Transitive Dependency - Package installed has other package dependency, same way dependent package has other package dependency and its continue .....
 
-## 👨‍🚀 To ingnite app using parcel package use below cmd
+### 👨‍🚀 To ingnite app using parcel package use below cmd
 
 ```sh
     npx parcel index.html - for dev build
     npx parcel build index.html - for prod build
 ```
 
-## 👨‍🚀 NPX is a package executer, and it is used to execute javascript packages directly, without installing them
+### 👨‍🚀 NPX is a package executer, and it is used to execute javascript packages directly, without installing them
 
-## browserslist package - The browsers to which you want your web to support
+### browserslist package - The browsers to which you want your web to support
 
 [👆 website: browserslist](https://browserslist.dev/?q=bGFzdCAyIHZlcnNpb25z)
 
 #
 
-## Update "scripts" in package.json for making command short to start application
+### Update "scripts" in package.json for making command short to start application
 
 ### So next time instead of running full cmd, just use "npm run start / npm start" (only for dev) but for prod full cmd is required "npm run build"
 
@@ -57,15 +71,15 @@
 
 #
 
-## 👨‍🚀 JSX is not HTML is JS, it is HTML/XML like syntax
+### 👨‍🚀 JSX is not HTML is JS, it is HTML/XML like syntax
 
-## 👨‍🚀 Babel converts (transcompile) the JSX code to JS code which browser understands
+### 👨‍🚀 Babel converts (transcompile) the JSX code to JS code which browser understands
 
-## 👨‍🚀 JSX => React.createElement => ReactElement - JS object => HTMLElement (render) [This all things are done by Babel]
+### 👨‍🚀 JSX => React.createElement => ReactElement - JS object => HTMLElement (render) [This all things are done by Babel]
 
-## 👨‍🚀 Babel is Javascript compiler
+### 👨‍🚀 Babel is Javascript compiler
 
-## 👨‍🚀 Always start React Component name with capital letter
+### 👨‍🚀 Always start React Component name with capital letter
 
 ## 👨‍🚀 React Functional component is normal JS function which return some JSX (React element)
 

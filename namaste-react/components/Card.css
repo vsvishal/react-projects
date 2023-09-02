@@ -1,0 +1,20 @@
+.res-card {
+    height: 230px;
+    width: 250px;
+    margin: 12px 14px;
+}
+
+.res-card:hover {
+    border: 1px solid #f0f0f0;
+    cursor: pointer;
+}
+
+.card-img {
+    height: 130px;
+    width: 250px;
+    object-fit: fill;
+}
+
+.details {
+    padding: 4px 10px;
+}

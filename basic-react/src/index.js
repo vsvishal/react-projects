@@ -4,18 +4,31 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
-const heading = React.createElement(
+let name = "Vishal Sharma";
+const myobj = { usrname: "Bhau Sharma", age: 26 };
+const myarr = [1, 2, 3];
+
+const myReactElement = React.createElement(
   "h1",
-  { style: { backgroundColor: "#212121" } },
-  "Hello from Vishal"
+  { style: { backgroundColor: "#212121", color: "white" } },
+  "Hello World !",
+  myarr
 );
 
-console.log(heading);
+function User({ data: { usrname, age } }) {
+  return (
+    <>
+      <h1>
+        {" "}
+        My name is {usrname} {age}{" "}
+      </h1>
+    </>
+  );
+}
+
+// console.log(myReactElement);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(heading);
+root.render(<User data={myobj} />);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
