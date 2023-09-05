@@ -18,6 +18,12 @@ function Body() {
 
     const jsonData = await data.json();
     console.log(jsonData);
+    console.log(
+      jsonData.data.cards[2].card.card.gridElements.infoWithStyle.restaurants
+    );
+    // setRestaurants(
+    //   jsonData.data.cards[2].card.card.gridElements.infoWithStyle.restaurants
+    // );
   };
 
   console.log("I am inside body");
