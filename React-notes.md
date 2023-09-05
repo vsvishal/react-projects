@@ -6,7 +6,9 @@
 
 ### What is reconciliation?
 
-### The algorithm React uses to diff one tree with another to determine which parts need to be changed.
+### The algorithm React uses to diff one tree (older Virtual dome) with another (newer virtual dome) to determine which parts need to be changed.
+
+## Comparing object is easy and fast then comparing object and HTMl, so Virtual dom at the end is object
 
 ### update - A change in the data used to render a React app. Usually the result of `setState`. Eventually results in a re-render.
 
@@ -114,12 +116,41 @@ const HeadingComponent = () => {
 
 ## 👨‍🚀 useCallback(fn, [dependencies]) - This hook is used to optimize the running of Function if something is done on its dependencies, basically it cache to optimize the running of Function again. It memorize the function
 
-## 👨‍🚀 useEffect(fn, [dependencies]) - If anyting is changes in dependencies then run the Function.
+## 👨‍🚀 useEffect(fn, [dependencies]) - If anyting is changes in dependencies then run the Function. It will get always called after 1st time component is rendered (after body is loaded). If you want to do anyting after rendering a component then use this.
 
 ## 👨‍🚀 If I need reference of anything then use the userRef() hook
 
 ## 👨‍🚀 Config driven UI - It means controlling your UI through data
 
-## 👨‍🚀 Whenever you loop the list alway add unique key={uniqui_id} to it, if you don't provide key e.g while looping array through map() then React will re-render all the components which is not good for optimization. So, adding key, React will re-render only changed thing. To allow React to uniquely identify the element always use key, so performance will be good.
+## 👨‍🚀 Whenever you loop the list alway add unique key={uniqui_id} to it, if you don't provide key e.g while looping array through map() then React will re-render all the elements which is not good for optimization. So, adding key, React will re-render only changed thing. To allow React to uniquely identify the element always use key, so performance will be good. It will called after component has been rendered.
 
 ## 👨‍🚀 React doesn't recomment to use index as key, if you don't have any unique index then use index as key.
+
+## 👨‍🚀 A module cannot have multiple default export, in one file only one default export is allowed
+
+```javascript
+  // Below is not allowed if it is done in same JS file
+  export default CDN_URL;
+  export default LOGO_URL
+
+  // For multiple export use Named export
+  export const CDN_URL = "https://media-assets.swiggy.com/swiggy/image/upload/123/";
+  export const LOGO_URL = "https://img.freepik.com/free-vector/fast-free-deliver";
+
+  // Named import is imported like
+  import { CDN_URL } from "../utils/constants";
+```
+
+## 👨‍🚀 Whenever a state variable update, React re-render the component
+
+## 👨‍🚀 If you don't use the hook var, and try to upate the normal var, then react will not re-render the component.
+
+## 👨‍🚀 React helps in syncing UI layer with Data layer
+
+## 👨‍🚀 React is fast because it is doing efficient DOM manipulation
+
+## 👨‍🚀 Seperation of concerns & Single responsibiliy principal in Microservice is where each & serive has its own job.
+
+## 👨‍🚀 Better UI approach (UI Loads => Render the skeleton => API call => Rerender)
+
+## 👨‍🚀 If you to try hit swiggy api it will get blocked by CORS (error: has been blocked by CORS policy: No 'Access-Control-Allow-Origin'), since localhost CORS are different then Swiggy server CORS. To bypass it add Cors chrome extension

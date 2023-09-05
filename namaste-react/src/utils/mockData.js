@@ -1,19 +1,3 @@
-import Card from "./Card";
-import "./Body.css";
-
-function Body() {
-  return (
-    <div className="body">
-      <div className="search">Search</div>
-      <div className="res-container">
-        {resDataList.map((restaurant) => (
-          <Card key={restaurant.info.id} restaurant={restaurant} />
-        ))}
-      </div>
-    </div>
-  );
-}
-
 const resDataList = [
   {
     info: {
@@ -1637,4 +1621,4 @@ const resDataList = [
   },
 ];
 
-export default Body;
+export default resDataList;

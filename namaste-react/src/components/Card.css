@@ -1,5 +1,5 @@
 .res-card {
-    width: 320px;
+    width: 280px;
     margin: 12px 14px;
 }
 
@@ -10,7 +10,7 @@
 
 .card-img {
     height: 170px;
-    width: 320px;
+    width: 280px;
     object-fit: fill;
 }
 

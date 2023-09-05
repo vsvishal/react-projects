@@ -1,0 +1,27 @@
+.search {
+    padding: 10px;
+    display: flex;
+    /* justify-content: center; */
+}
+
+.res-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.filter {
+    margin-top: 10px;
+    margin-left: 155px;
+}
+
+.filter-btn {
+    padding: 8px;
+    border-radius: 5px;
+    background-color: coral;
+    cursor: pointer;
+}
+
+.filter-btn:hover {
+    background-color: darksalmon;
+}
