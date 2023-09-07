@@ -1,7 +1,13 @@
 import "./Header.css";
 import { LOGO_URL } from "../utils/constants";
+import { useState } from "react";
 
 function Header() {
+  // This btnName var is constant, react is not changing its value, actually during rerender, it creates new var,
+  // since again Header component is loaded
+  const [btnName, setBtnName] = useState("Login");
+  console.log("Header component");
+
   return (
     <div className="header">
       <div className="logo-conatainer">
@@ -13,6 +19,14 @@ function Header() {
           <li>About Us</li>
           <li>Contact Us</li>
           <li>Cart</li>
+          <button
+            className="login-btn"
+            onClick={() =>
+              btnName === "Login" ? setBtnName("Logout") : setBtnName("Login")
+            }
+          >
+            {btnName}
+          </button>
         </ul>
       </div>
     </div>

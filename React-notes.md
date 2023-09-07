@@ -154,3 +154,9 @@ const HeadingComponent = () => {
 ## 👨‍🚀 Better UI approach (UI Loads => Render the skeleton => API call => Rerender)
 
 ## 👨‍🚀 If you to try hit swiggy api it will get blocked by CORS (error: has been blocked by CORS policy: No 'Access-Control-Allow-Origin'), since localhost CORS are different then Swiggy server CORS. To bypass it add Cors chrome extension
+
+## 👨‍🚀 Shimmer UI: A Better Way to Show Loading States
+
+## 👨‍🚀 `javascript const [btnName, setBtnName] = useState("Login");` This btnName var is constant, react is not changing its value, actually during rerender, it creates new var when again component is loaded.
+
+## 👨‍🚀 Whenever React state variable changes, React re-render the that component again

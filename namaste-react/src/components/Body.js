@@ -2,9 +2,12 @@ import Card from "./Card";
 import "./Body.css";
 import resDataList from "../utils/mockData";
 import { useEffect, useState } from "react";
+import Shimmer from "./Shimmer";
 
 function Body() {
-  const [restaurants, setRestaurants] = useState(resDataList);
+  const [restaurants, setRestaurants] = useState([]);
+  const [allRestaurants, setAllRestaurants] = useState([]);
+  const [searchText, setSearchText] = useState("");
 
   useEffect(() => {
     console.log("useEffect() called");
@@ -17,13 +20,13 @@ function Body() {
     );
 
     const jsonData = await data.json();
-    console.log(jsonData);
-    console.log(
-      jsonData.data.cards[2].card.card.gridElements.infoWithStyle.restaurants
-    );
-    // setRestaurants(
-    //   jsonData.data.cards[2].card.card.gridElements.infoWithStyle.restaurants
-    // );
+    // console.log(jsonData);
+    const restaurantList =
+      jsonData.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
+        ?.restaurants;
+
+    setRestaurants(restaurantList);
+    setAllRestaurants(restaurantList);
   };
 
   console.log("I am inside body");
@@ -32,9 +35,37 @@ function Body() {
     let filteredRes = resDataList.filter((rest) => rest.info.avgRating >= 4.5);
     setRestaurants(filteredRes);
   };
-  return (
+
+  // Conditional Rendering
+  // if (restaurants.length === 0) {
+  //   return <Shimmer />;
+  // }
+
+  return restaurants.length === 0 ? (
+    <Shimmer />
+  ) : (
     <div className="body">
       <div className="filter">
+        <div className="search">
+          <input
+            type="text"
+            className="search-box"
+            placeholder="Search Restaurants"
+            value={searchText}
+            onChange={(e) => setSearchText(e.target.value)}
+          />
+          <button
+            className="search-btn"
+            onClick={() => {
+              const searchRest = allRestaurants.filter((res) =>
+                res.info.name.toLowerCase().includes(searchText.toLowerCase())
+              );
+              setRestaurants(searchRest);
+            }}
+          >
+            Search
+          </button>
+        </div>
         <button
           className="filter-btn"
           onClick={() => highestRatingResHandler(resDataList)}
