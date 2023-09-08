@@ -36,6 +36,13 @@ function Body() {
     setRestaurants(filteredRes);
   };
 
+  const searchRestHandler = () => {
+    const searchRest = allRestaurants.filter((res) =>
+      res.info.name.toLowerCase().includes(searchText.toLowerCase())
+    );
+    setRestaurants(searchRest);
+  };
+
   // Conditional Rendering
   // if (restaurants.length === 0) {
   //   return <Shimmer />;
@@ -54,15 +61,7 @@ function Body() {
             value={searchText}
             onChange={(e) => setSearchText(e.target.value)}
           />
-          <button
-            className="search-btn"
-            onClick={() => {
-              const searchRest = allRestaurants.filter((res) =>
-                res.info.name.toLowerCase().includes(searchText.toLowerCase())
-              );
-              setRestaurants(searchRest);
-            }}
-          >
+          <button className="search-btn" onClick={searchRestHandler}>
             Search
           </button>
         </div>

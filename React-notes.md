@@ -155,8 +155,48 @@ const HeadingComponent = () => {
 
 ## 👨‍🚀 If you to try hit swiggy api it will get blocked by CORS (error: has been blocked by CORS policy: No 'Access-Control-Allow-Origin'), since localhost CORS are different then Swiggy server CORS. To bypass it add Cors chrome extension
 
-## 👨‍🚀 Shimmer UI: A Better Way to Show Loading States
+## 👨‍🚀 Shimmer UI: A Better Way to Show Loading States, to show skeleton of app.
 
 ## 👨‍🚀 `javascript const [btnName, setBtnName] = useState("Login");` This btnName var is constant, react is not changing its value, actually during rerender, it creates new var when again component is loaded.
 
 ## 👨‍🚀 Whenever React state variable changes, React re-render the that component again
+
+## 👨‍🚀 UseEffect()
+
+```javascript
+  useEffect(callBackFun, dependecy array);
+
+  // If no dependecy array is given then useEffect() will run every time that component render
+  useEffect(callBackFun)
+
+  // If dependecy array is empty [], then useEffect() will run only once when 1st time component render
+  useEffect(callBackFun, [])
+
+  // If dependency array is [btnName] then it is called everytime btnName is updated
+    useEffect(() => {
+    console.log("Header useEffect() called");
+  }, [btnName]);
+```
+
+## 👨‍🚀 Never create hook outside the component, otherwise it will throw error. And always keep the hook at the top
+
+## 👨‍🚀 useState() hook is used for creating local state variable inside the component.
+
+## 👨‍🚀 Never create hook inside the another function, loop, condition.
+
+```javascript
+  useRouteError() hook from "react-router-dom" helps us in giving exact/precise error
+  import { useRouteError } from "react-router-dom";
+```
+
+```javascript
+// Link from react-router-dom is used to navigate the page without loading the all page, only particular component get loaded
+<li>
+  <Link to={"/about"}>About Us</Link>
+</li>
+```
+
+## 👨‍🚀 There are 2 types of routing in web apps
+
+- Client Side Routing (SPA uses this)
+- Server Side Routing
