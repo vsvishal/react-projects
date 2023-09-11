@@ -17,13 +17,25 @@ function Header() {
       <div className="nav-items">
         <ul>
           <li>
-            <Link to={"/"}>Home</Link>{" "}
+            <Link to={"/"} style={{ textDecoration: "none", color: "white" }}>
+              Home
+            </Link>{" "}
           </li>
           <li>
-            <Link to={"/about"}>About Us</Link>
+            <Link
+              to={"/about"}
+              style={{ textDecoration: "none", color: "white" }}
+            >
+              About Us
+            </Link>
           </li>
           <li>
-            <Link to={"/contact"}>Contact Us</Link>
+            <Link
+              to={"/contact"}
+              style={{ textDecoration: "none", color: "white" }}
+            >
+              Contact Us
+            </Link>
           </li>
           <li>Cart</li>
           <button

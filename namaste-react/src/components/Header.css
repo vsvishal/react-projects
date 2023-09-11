@@ -16,6 +16,10 @@
     padding: 10px 20px;
 }
 
+.nav-items > ul > li:hover {
+    background-color: orangered;
+}
+
 .logo {
     height: 75px;
     width: 100px;

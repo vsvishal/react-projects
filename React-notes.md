@@ -200,3 +200,11 @@ const HeadingComponent = () => {
 
 - Client Side Routing (SPA uses this)
 - Server Side Routing
+
+## 👨‍🚀 Cannot destructure Property of Undefined
+
+```javascript
+// Provide a fallback of an empty object if obj may be null
+// https://bobbyhadz.com/blog/javascript-cannot-destructure-property-of-undefined
+const { name } = resInfo || {};
+```
