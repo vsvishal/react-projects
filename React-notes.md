@@ -154,3 +154,5 @@ const HeadingComponent = () => {
 ## 👨‍🚀 Better UI approach (UI Loads => Render the skeleton => API call => Rerender)
 
 ## 👨‍🚀 If you to try hit swiggy api it will get blocked by CORS (error: has been blocked by CORS policy: No 'Access-Control-Allow-Origin'), since localhost CORS are different then Swiggy server CORS. To bypass it add Cors chrome extension
+
+## 👨‍🚀 useId() hook
