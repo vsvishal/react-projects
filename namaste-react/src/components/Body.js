@@ -1,6 +1,6 @@
 import Card from "./Card";
 import "./Body.css";
-import resDataList from "../utils/mockData";
+// import resDataList from "../utils/mockData";
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
@@ -26,7 +26,7 @@ function Body() {
       jsonData.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
         ?.restaurants;
 
-    console.log("resDataList : ", resDataList);
+    console.log("restaurantList : ", restaurantList);
 
     setRestaurants(restaurantList);
     setAllRestaurants(restaurantList);
@@ -70,7 +70,7 @@ function Body() {
         </div>
         <button
           className="filter-btn"
-          onClick={() => highestRatingResHandler(resDataList)}
+          onClick={() => highestRatingResHandler(allRestaurants)}
         >
           Top Rated Restraunt
         </button>
