@@ -210,3 +210,40 @@ const HeadingComponent = () => {
 // https://bobbyhadz.com/blog/javascript-cannot-destructure-property-of-undefined
 const { name } = resInfo || {};
 ```
+
+## 👨‍🚀 In class base component 1st constructor is called => render() is called => componentDidMount() is called when the componet has already mounted
+
+## 👨‍🚀 If ther is Parent Child component then, 1st Parents constructor is called => render() is called => Childs constructor is called => Child render() is called => Child componentDidMount() is called then => Parents componentDidMount() is called.
+
+### componentDidMount() is used to make api calls.
+
+```javascript
+// https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
+  - Parent Constructor()
+  - Parent render()
+
+    // Render in done in single batch, this is render phase
+    - First Child Constructor()
+    - First Child render()
+
+    - Second Child Constructor()
+    - Second Child render()
+
+    // Dom updates in single batch, here react tries to optimize since dom maniupulation is expensive. This is "commit" phase
+    - First Child componentDidMount()
+    - Second Child componentDidMount()
+
+  - Parent componentDidMount()
+
+  // componentWillUnmount() will  get called when we are leaving the page, it was used for clean up activity like, suppose you have created setInterval() inside componentDidMount() and you forgot to clean up inside componentWillUnmount(), then even you leave the page, timer will keep running which is bad.
+```
+
+## 👨‍🚀 Always follow Single Responsibility principal when writing code
+
+## 👨‍🚀 Dynamic bundling / Code spliting / Chunking (If we don't do this, then single JS bundle will contain all the component code, which will make bundle very happy)
+
+### ➡️ When you do system design planning for front-end, then do Logical separation of bundles. (i.e Bundle should have enough code for that feature)
+
+### ➡️ From Nework tab => JS => in browser you can check bundle
+
+image.png
