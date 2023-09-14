@@ -245,7 +245,12 @@ const { name } = resInfo || {};
 - ➡️ When you do system design planning for front-end, then do Logical separation of bundles. (i.e Bundle should have enough code for that feature)
 - ➡️ From Nework tab => JS => in browser you can check bundle
 
-## 👨‍🚀 Different way of writing CSS => Sass (Not recommended way)
+## 👨‍🚀 Different way of writing CSS
 
-1. Vishl
-2. dff
+1. Sass (Not recommended way)
+2. styled components
+3. Material UI (library)
+4. Bootstap
+5. Chakra UI
+6. Ant Design
+7. Tailwing CSS (MOST POPULAR)
