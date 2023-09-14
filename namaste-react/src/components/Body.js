@@ -26,7 +26,7 @@ function Body() {
       jsonData.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
         ?.restaurants;
 
-    console.log("restaurantList : ", restaurantList);
+    // console.log("restaurantList : ", restaurantList);
 
     setRestaurants(restaurantList);
     setAllRestaurants(restaurantList);
@@ -59,7 +59,7 @@ function Body() {
     );
   }
 
-  return restaurants.length === 0 ? (
+  return restaurants?.length === 0 ? (
     <Shimmer />
   ) : (
     <div className="body">
@@ -84,7 +84,7 @@ function Body() {
         </button>
       </div>
       <div className="res-container">
-        {restaurants.map((restaurant) => (
+        {restaurants?.map((restaurant) => (
           <Link
             key={restaurant.info.id}
             to={"/restaurants/" + restaurant.info.id}

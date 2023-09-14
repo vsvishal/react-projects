@@ -240,10 +240,12 @@ const { name } = resInfo || {};
 
 ## 👨‍🚀 Always follow Single Responsibility principal when writing code
 
-## 👨‍🚀 Dynamic bundling / Code spliting / Chunking (If we don't do this, then single JS bundle will contain all the component code, which will make bundle very happy)
+## 👨‍🚀 Dynamic bundling / Code spliting / Chunking / Lazy loading/ On demand loading / Dynamic import (If we don't do this, then single JS bundle will contain all the component code, which will make bundle very happy)
 
-### ➡️ When you do system design planning for front-end, then do Logical separation of bundles. (i.e Bundle should have enough code for that feature)
+- ➡️ When you do system design planning for front-end, then do Logical separation of bundles. (i.e Bundle should have enough code for that feature)
+- ➡️ From Nework tab => JS => in browser you can check bundle
 
-### ➡️ From Nework tab => JS => in browser you can check bundle
+## 👨‍🚀 Different way of writing CSS => Sass (Not recommended way)
 
-image.png
+1. Vishl
+2. dff
