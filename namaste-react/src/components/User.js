@@ -14,7 +14,7 @@ const User = () => {
   //   }, []);
 
   return (
-    <div className="user-card">
+    <div className="m-4 p-4 w-[250px] rounded-lg bg-gray-800">
       <h2>Name: Vishal</h2>
       <h3>Location: Pune</h3>
       <h4>Contact: @vishal11</h4>

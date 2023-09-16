@@ -11,45 +11,38 @@ function Header() {
   const onlineStatus = useOnlineStatus();
 
   return (
-    <div className="flex justify-between">
-      <div className="logo-conatainer">
-        <img className="w-18" src={LOGO_URL} alt="logo" />
+    <div className="flex justify-between shadow-lg items-center">
+      <div className="m-3">
+        <img className="w-20 h-16" src={LOGO_URL} alt="logo" />
       </div>
-      <div className="nav-items">
-        <ul className="flex m-4 p-4">
-          <li>Online status: {onlineStatus === true ? "🟢" : "🔴"} </li>
-          <li>
-            <Link to={"/"} style={{ textDecoration: "none", color: "white" }}>
+      <div className="flex">
+        <ul className="flex m-4 p-4 ">
+          <li className="px-4 hover:text-yellow-400">
+            Online status: {onlineStatus === true ? "🟢" : "🔴"}{" "}
+          </li>
+          <li className="px-4 text-white hover:text-yellow-400">
+            <Link to={"/"} style={{ textDecoration: "none" }}>
               Home
             </Link>{" "}
           </li>
-          <li>
-            <Link
-              to={"/about"}
-              style={{ textDecoration: "none", color: "white" }}
-            >
+          <li className="px-4 text-white hover:text-yellow-400">
+            <Link to={"/about"} style={{ textDecoration: "none" }}>
               About Us
             </Link>
           </li>
-          <li>
-            <Link
-              to={"/contact"}
-              style={{ textDecoration: "none", color: "white" }}
-            >
+          <li className="px-4 hover:text-yellow-400">
+            <Link to={"/contact"} style={{ textDecoration: "none" }}>
               Contact Us
             </Link>
           </li>
-          <li>
-            <Link
-              to={"/grocery"}
-              style={{ textDecoration: "none", color: "white" }}
-            >
+          <li className="px-4 hover:text-yellow-400">
+            <Link to={"/grocery"} style={{ textDecoration: "none" }}>
               Grocery
             </Link>
           </li>
-          <li>Cart</li>
+          <li className="px-4 hover:text-yellow-400">Cart</li>
           <button
-            className="login-btn"
+            className="px-4 bg-orange-600 py-1 rounded-sm"
             onClick={() =>
               btnName === "Login" ? setBtnName("Logout") : setBtnName("Login")
             }

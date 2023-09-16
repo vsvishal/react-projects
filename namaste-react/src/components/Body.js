@@ -61,28 +61,33 @@ function Body() {
   return restaurants?.length === 0 ? (
     <Shimmer />
   ) : (
-    <div className="body">
-      <div className="filter">
-        <div className="search">
+    <div className="">
+      <div className="flex items-center">
+        <div className="p-4">
           <input
             type="text"
-            className="search-box"
+            className="px-2 py-1 rounded-sm text-black"
             placeholder="Search Restaurants"
             value={searchText}
             onChange={(e) => setSearchText(e.target.value)}
           />
-          <button className="search-btn" onClick={searchRestHandler}>
+          <button
+            className="px-4 py-1 bg-green-600 rounded-sm"
+            onClick={searchRestHandler}
+          >
             Search
           </button>
         </div>
-        <button
-          className="filter-btn"
-          onClick={() => highestRatingResHandler(allRestaurants)}
-        >
-          Top Rated Restraunt
-        </button>
+        <div className="p-4">
+          <button
+            className="px-4 py-1 bg-blue-600 rounded-sm"
+            onClick={() => highestRatingResHandler(allRestaurants)}
+          >
+            Top Rated Restraunt
+          </button>
+        </div>
       </div>
-      <div className="res-container">
+      <div className="flex flex-wrap justify-center">
         {restaurants?.map((restaurant) => (
           <Link
             key={restaurant.info.id}

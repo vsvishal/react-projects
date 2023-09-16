@@ -6,20 +6,22 @@ function Card({ restaurant }) {
   const { cloudinaryImageId, name, cuisines, avgRating, costForTwo, locality } =
     restaurant.info;
 
-  const cardStyle = {
-    backgroundColor: "gray",
-  };
+  // const cardStyle = {
+  //   backgroundColor: "#595959",
+  // };
   return (
-    <div className="res-card" style={cardStyle}>
-      <img className="card-img" src={CDN_URL + cloudinaryImageId} alt="food" />
-      <div className="details">
-        <h3>{name} </h3>
-        <h4>{cuisines.join(", ")}</h4>
-        <h4>⭐️ {avgRating}</h4>
-        <h4>{costForTwo}</h4>
-        <h4>{locality}</h4>
-        <h4>21 minutes</h4>
-      </div>
+    <div className="m-4 p-4 w-[250px] rounded-lg bg-gray-800 hover:bg-gray-600 h-[95%]">
+      <img
+        className="rounded-lg h-40 w-60"
+        src={CDN_URL + cloudinaryImageId}
+        alt="food"
+      />
+      <h3 className="font-bold text-lg my-2">{name} </h3>
+      <h4>{cuisines.join(", ")}</h4>
+      <h4>⭐️ {avgRating}</h4>
+      <h4>{costForTwo}</h4>
+      <h4>{locality}</h4>
+      <h4>21 minutes</h4>
     </div>
   );
 }
