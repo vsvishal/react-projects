@@ -1,5 +1,4 @@
 import User from "./User";
-import "./User.css";
 import USerClass from "./UserClass";
 
 function About() {

@@ -1,4 +1,3 @@
-import "./Header.css";
 import { LOGO_URL } from "../utils/constants";
 import { useState } from "react";
 import { Link } from "react-router-dom";
@@ -12,12 +11,12 @@ function Header() {
   const onlineStatus = useOnlineStatus();
 
   return (
-    <div className="header">
+    <div className="flex justify-between">
       <div className="logo-conatainer">
-        <img className="logo" src={LOGO_URL} alt="logo" />
+        <img className="w-18" src={LOGO_URL} alt="logo" />
       </div>
       <div className="nav-items">
-        <ul>
+        <ul className="flex m-4 p-4">
           <li>Online status: {onlineStatus === true ? "🟢" : "🔴"} </li>
           <li>
             <Link to={"/"} style={{ textDecoration: "none", color: "white" }}>

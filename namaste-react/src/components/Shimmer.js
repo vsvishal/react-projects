@@ -1,5 +1,3 @@
-import "./Shimmer.css";
-
 function Shimmer() {
   return (
     <>

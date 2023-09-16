@@ -1,5 +1,4 @@
 import Card from "./Card";
-import "./Body.css";
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";

@@ -1,4 +1,3 @@
-import "./Card.css";
 import { CDN_URL } from "../utils/constants";
 
 function Card({ restaurant }) {
