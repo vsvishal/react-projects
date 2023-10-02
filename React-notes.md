@@ -240,7 +240,7 @@ const { name } = resInfo || {};
 
 ## 👨‍🚀 Always follow the Single Responsibility principle when writing code
 
-## 👨‍🚀 Dynamic bundling / Code splitting / Chunking / Lazy loading/On-demand loading / Dynamic import (If we don't do this, then a single JS bundle will contain all the component code, which will make the bundle very happy)
+## 👨‍🚀 Dynamic bundling / Code splitting / Chunking / Lazy loading/On-demand loading / Dynamic import (If we don't do this, then a single JS bundle will contain all the component code, which will make the bundle very heavy)
 
 - ➡️ When you do system design planning for the front-end, then do Logical separation of bundles. (i.e. Bundle should have enough code for that feature)
 - ➡️ From Network tab => JS => in browser you can check bundle
