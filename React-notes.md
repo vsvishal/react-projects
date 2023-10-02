@@ -22,7 +22,7 @@
 
 ### 🤓 Tilde (~) notation: It is used to match the most recent patch version. Tilde ~ notation freezes the major version and minor version. As we know patch updates are bug fixes that’s why we can say ~ notation allows us to automatically accept bug fixes.
 
-### Caret (^) notation: It is used for automatically updating the minor updates along with patch updates.
+### Caret (^) notation: It is used for automatically updating minor updates along with patch updates.
 
 ### Syntax: The syntax of the npm version looks like the following.
 
@@ -36,7 +36,7 @@
 
 ### Package.json is a file that contains all the relevant information about your project, the dependencies it has installed, and so on.
 
-### When someone clones your repo and runs npm install the presence of ^ will cause them to get the latest patched version (whether that be a major or minor patch). Codes which are not in consonance with the latest version will break down.
+### When someone clones your repo and runs npm install the presence of ^ will cause them to get the latest patched version (whether that be a major or minor patch). Codes that are not in consonance with the latest version will break down.
 
 ### This is when they released package-lock.json. Now, this file will lock npm dependencies the way they were at the time of making the program. So, even if someone clones your repo and installs this package later, he will get hands on the version that the program was scripted in. Basically, it just ignores tilde and carat functions.
 
@@ -75,7 +75,7 @@
 
 ### 👨‍🚀 JSX is not HTML is JS, it is HTML/XML like syntax
 
-### 👨‍🚀 Babel converts (transcompile) the JSX code to JS code which browser understands
+### 👨‍🚀 Babel converts (transcompiles) the JSX code to JS code which the browser understands
 
 ### 👨‍🚀 JSX => React.createElement => ReactElement - JS object => HTMLElement (render) [This all things are done by Babel]
 
@@ -122,9 +122,9 @@ const HeadingComponent = () => {
 
 ## 👨‍🚀 Config driven UI - It means controlling your UI through data
 
-## 👨‍🚀 Whenever you loop the list always add unique key={uniqui_id} to it, if you don't provide a key e.g. while looping array through map() then React will re-render all the elements which is not good for optimization. So, by adding a key, React will re-render only the changed thing. To allow React to uniquely identify the element always use key, so performance will be good. It will called after the component has been rendered.
+## 👨‍🚀 Whenever you loop the list always add unique key={uniqui_id} to it, if you don't provide a key e.g. while looping array through map() then React will re-render all the elements which is not good for optimization. So, by adding a key, React will re-render only the changed thing. To allow React to uniquely identify the element always use the key, so performance will be good. It will called after the component has been rendered.
 
-## 👨‍🚀 React doesn't recommend using the index as key, if you don't have any unique index then use the index as a key.
+## 👨‍🚀 React doesn't recommend using the index as a key, if you don't have any unique index then use the index as a key.
 
 ## 👨‍🚀 A module cannot have multiple default export, in one file only one default export is allowed
 
@@ -153,7 +153,7 @@ const HeadingComponent = () => {
 
 ## 👨‍🚀 Better UI approach (UI Loads => Render the skeleton => API call => Rerender)
 
-## 👨‍🚀 If you try to hit swiggy api it will get blocked by CORS (error: has been blocked by CORS policy: No 'Access-Control-Allow-Origin'), since localhost CORS are different than Swiggy server CORS. To bypass it add the Cors Chrome extension
+## 👨‍🚀 If you try to hit Swiggy API it will get blocked by CORS (error: has been blocked by CORS policy: No 'Access-Control-Allow-Origin'), since localhost, CORS is different than Swiggy server CORS. To bypass it add the Cors Chrome extension
 
 ## 👨‍🚀 useId() hook
 
@@ -229,7 +229,7 @@ const { name } = resInfo || {};
     - Second Child Constructor()
     - Second Child render()
 
-    // Dom updates in a single batch, here react tries to optimize since dom manipulation is expensive. This is the "commit" phase
+    // Dom updates in a single batch, here react tries to optimize since Dom manipulation is expensive. This is the "commit" phase
     - First Child componentDidMount()
     - Second Child componentDidMount()
 
@@ -283,7 +283,7 @@ https://react.dev/learn/sharing-state-between-components#lifting-state-up-by-exa
 
 ## 👨‍🚀 To avoid prop drilling (passing props from top-level component to way down to component) use React context()
 
-## 👨‍🚀 Redux is not a mandatory tool to use in React, application state also can be managed without Redux in React. Mostly use Redux for very large applications. Use "Redux Toolkit" instead of native "React-Redux", it simplifies.
+## 👨‍🚀 Redux is not a mandatory tool to use in React, the application state also can be managed without Redux in React. Mostly use Redux for very large applications. Use "Redux Toolkit" instead of native "React-Redux", it simplifies.
 
 ## 👨‍🚀 There are various external libraries like Redux
 
@@ -293,15 +293,15 @@ https://react.dev/learn/sharing-state-between-components#lifting-state-up-by-exa
 ## 👨‍🚀 Redux
 
 - Redux store is a big javascript object that is kept in a Global central space
-- To avoid the Redux store from becoming very large, clumsy there are slices in Redux store (e.g. loggedIn users slice, cart slice)
-- [For Write Data] e.g When you click on button => Redux dispatches an "Action" => Action calls the "Function" (Reducer) => then this Function updates the slice of Redux store [modies the required thing (e.g Cart)]
+- To avoid the Redux store from becoming very large, clumsy there are slices in the Redux store (e.g. loggedIn users slice, cart slice)
+- [For Write Data] e.g. When you click on button => Redux dispatches an "Action" => Action calls the "Function" (Reducer) => then this Function updates the slice of Redux store [modies the required thing (e.g Cart)]
 - For Reading Data we use "Selector" also known as "Subscribing to store" (If data in store changes, the component updates automatically). React Subscribe through selector
-- While subscribing to store, only subscribe to specific portion of store which is required otherwise it will hit performance.
+- While subscribing to the store, only subscribe to a specific portion of the store which is required otherwise it will hit performance.
 - ```javascript
-  // Suscribing to the specfic slice of store using a Selector, good for performance
+  // Subscribing to the specific slice of store using a Selector, good for performance
   const cartItems = useSelector((store) => store.cart.items);
 
-  // Below is bad for performance, since here whole store is subscribed, so if anything changes in store, it load complete store again.
+  // Below is bad for performance, since here the whole store is subscribed, so if anything changes in the store, it loads the complete store again.
   const store = useSelector((store) => store);
   const cartItems = store.cart.items;
 
@@ -315,8 +315,8 @@ https://react.dev/learn/sharing-state-between-components#lifting-state-up-by-exa
       import { current } from "@reduxjs/toolkit";
       console.log(current(state))
 
-      // state = [] - not allowed, if you do, it is not mutating the state, its only changing the reference
-      <!-- return {items: []} // it will work, since here you are mututating the state -->
+      // state = [] - not allowed, if you do, it is not mutating the state, it only changes the reference
+      <!-- return {items: []} // it will work, since here you are mutating the state -->
     },
   ```
 
@@ -328,8 +328,8 @@ https://react.dev/learn/sharing-state-between-components#lifting-state-up-by-exa
     newState.items.push(action.payload);
     return newState;
 
-  <!-- In newer version current, Redux toolkit, we have to mututate the state or return a new state, no need to return anything,
-  curretly it does the same thing as older version behind teh scene with the help of "immer" library -->
+  <!-- In the newer version current, Redux toolkit, we have to mutate the state or return a new state, no need to return anything,
+  currently it does the same thing as an older version behind the scene with the help of the "immer" library -->
     state.items.push(action.payload)
   ```
 
@@ -341,7 +341,7 @@ https://react.dev/learn/sharing-state-between-components#lifting-state-up-by-exa
 
 ## 👨‍🚀 React Testing Library
 
-- React Testing Library builds on top of DOM Testing Library by adding APIs for working with React components.
+- React Testing Library builds on top of the DOM Testing Library by adding APIs for working with React components.
 - Specific to a testing framework (though we recommend Jest as our preference, the library works with any framework).
 
 ### Testing dependency Installation
@@ -373,7 +373,7 @@ https://react.dev/learn/sharing-state-between-components#lifting-state-up-by-exa
 [👆 website: parceljs](https://parceljs.org/languages/javascript/#babel)
 
 7. npm install --save-dev jest-environment-jsdom
-8. npm i -D @babel/preset-react - to make JSX works with test cases
+8. npm i -D @babel/preset-react - to make JSX work with test cases
 9. Include @babel/preset-react inside my babel
 10. Add this to "babel.config.js"
 11. npm i -D @testing-library/jest-dom
@@ -387,10 +387,10 @@ module.exports = {
 };
 ```
 
-### 👨‍🚀 Whever you are testing UI component in a React, you have to render that component on the JSDom 1st.
+### 👨‍🚀 Whenever you are testing the UI component in React, you have to render that component on the JSDom 1st.
 
 ```javascript
-// Test Case example
+// Test Case Example
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import Contact from "../Contact";
@@ -411,7 +411,7 @@ test("Should load heading inside Contact component", () => {
 describe("Contact Us Page Test Case", () => {});
 ```
 
-- If you don't have anything to find the element then add data-testid="" inside element
+- If you don't have anything to find the element then add data-testid="" inside the element
 
 ```javacript
  const searchInput = screen.getByTestId("searchInput");
