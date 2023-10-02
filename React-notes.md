@@ -278,7 +278,7 @@ const { name } = resInfo || {};
 
 https://react.dev/learn/sharing-state-between-components#lifting-state-up-by-example
 
-- It's not possible to directly
+- It's not possible directly
 - We can create a state handler function in the parent component and pass it as a prop of the child component. After that, we can use the child component function to set the parent component's state. In such a way, we can manage the state of the parent component from the child component.
 
 ## 👨‍🚀 To avoid prop drilling (passing props from top-level component to way down to component) use React context()
