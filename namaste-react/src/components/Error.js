@@ -5,7 +5,7 @@ function Error() {
   console.log(err);
 
   return (
-    <div>
+    <div className="m-4 p-4 w-[250px] rounded-lg bg-gray-800">
       <h1>Oops !!</h1>
       <h2>Something went wrong</h2>
       <h3>
