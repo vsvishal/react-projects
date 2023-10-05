@@ -438,3 +438,5 @@ describe("Contact Us Page Test Case", () => {});
 
 - act() - whenver your component is updating the state or it has async rap under act()
 - You can check the coverage report in the browser by going to "coverage" folder => "lco-report" => "index.html"
+
+### 👨‍🚀 If any state get updated in that particular component then that whole particular component is re-rendered
