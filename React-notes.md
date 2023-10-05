@@ -254,3 +254,20 @@ const { name } = resInfo || {};
 5. Chakra UI
 6. Ant Design
 7. Tailwing CSS (MOST POPULAR)
+
+## 👨‍🚀 Evaluated Expression
+
+```javascript
+function App() {
+  const usrname = "Vishal";
+  return (
+    <>
+      /*
+      {usrname} this is Evaluated Expression (here final outcome is given) Inside
+      it you can't write JS code, since JSX is JS object & in Object you don't write
+      any condition */
+      <h1>Name is {usrname} </h1>
+    </>
+  );
+}
+```
