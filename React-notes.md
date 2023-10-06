@@ -440,3 +440,23 @@ describe("Contact Us Page Test Case", () => {});
 - You can check the coverage report in the browser by going to "coverage" folder => "lco-report" => "index.html"
 
 ### 👨‍🚀 If any state get updated in that particular component then that whole particular component is re-rendered
+
+### React Jest Testing static images
+
+```javascript
+// Jest react test case will fail if you try to import static images
+import logo from "../images/Awesome.png";
+
+// Follow below link to setup
+// https://stackoverflow.com/questions/46898638/importing-images-breaks-jest-test
+
+// Adding bellow line into jest.config.js file helped me to test pass,
+
+"\\.(jpg|jpeg|png)$": "identity-obj-proxy",
+Example:
+
+ moduleNameMapper: {
+    "\\.(css)$": "identity-obj-proxy",
+    "\\.(jpg|jpeg|png)$": "identity-obj-proxy",
+  },
+```
