@@ -444,4 +444,4 @@ Example:
   },
 ```
 
-## 🤓 Put keys={} on element which is repeating
+## 🤓 Put keys={} on HTML element which is repeating
