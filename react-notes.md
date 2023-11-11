@@ -443,3 +443,5 @@ Example:
     "\\.(jpg|jpeg|png)$": "identity-obj-proxy",
   },
 ```
+
+## 🤓 Put keys={} on element which is repeating
