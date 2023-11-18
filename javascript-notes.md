@@ -43,6 +43,7 @@
 
 
 ## React
+1. Lazyloading https://www.syncfusion.com/blogs/post/lazy-loading-with-react.aspx
 
 
 
