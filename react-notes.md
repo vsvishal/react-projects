@@ -6,7 +6,7 @@
 
 ### What is reconciliation?
 
-### The algorithm React uses to diff one tree (older Virtual dome) with another (newer virtual dome) to determine which parts need to be changed.
+### The algorithm React uses to diff one tree (older Virtual dome) with another (newer virtual dom) to determine which parts need to be changed.
 
 ## Comparing objects is easier and faster than comparing objects and HTML, so Virtual Dom at the end is an object
 
