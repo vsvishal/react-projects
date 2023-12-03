@@ -450,3 +450,6 @@ Example:
 - With the help of forwardRef function, you can pass the ref object down to the component and pass it to any DOM element you prefer, which is not possible through useRef(
 - [👆 forwordRed()](https://ilxanlar.medium.com/react-forwardref-in-two-minutes-2f33071c72fa)
 
+## 🤓 State is React is immutable
+[👆 forwordRed()](https://reacttraining.com/blog/state-in-react-is-immutable)
+
